@@ -16,7 +16,9 @@ this index.vue file is inside the products folder, therefore, it will be shown w
 </template>
 
 <script setup>
-
+definePageMeta({
+    layout: 'products'
+})
 
 </script>
 

@@ -16,6 +16,9 @@
 //Note that the destructuring proccess must use the same name as the component name.
 const { id } = useRoute().params
 
+definePageMeta({
+    layout: 'products'
+})
 </script>
 
 <style  scoped>
