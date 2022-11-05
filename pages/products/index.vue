@@ -8,10 +8,11 @@ this index.vue file is inside the products folder, therefore, it will be shown w
 <template>
 
     <div>
-        <h2>PRODUCTS</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est iusto nihil commodi voluptatibus cumque ab
-            nesciunt doloribus aut, illum tempora deleniti ipsam maiores magnam possimus a libero nemo adipisci
-            pariatur?</p>
+        <div class="grid grid-cols-4 gap-5">
+            <div v-for="p in products">
+                <NuxtLink :to="`/products/${p.id}`">{{ p.title }}</NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -19,6 +20,15 @@ this index.vue file is inside the products folder, therefore, it will be shown w
 definePageMeta({
     layout: 'products'
 })
+
+//nuxt render the page in the server and sends the loaded page to the browser. Also, during navigation, nuxt loads data in the browser.
+//that means the code inside the script tag, in the composition API, can run both in the server and in the browser.
+//it is important to keep that in mind because not all code can run in both ends, for example, the window. object, which is strictly used in the browser,
+//not on the server.
+
+//to fetch data from an API, I'll use the useFetch() method built in Nuxt.
+//inside the composition api, I can use the await keyword
+const { data: products } = await useFetch('https://fakestoreapi.com/products')
 
 </script>
 
