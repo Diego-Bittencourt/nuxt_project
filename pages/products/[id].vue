@@ -29,7 +29,12 @@ const { data: product } = await useFetch(uri, { key: id });
 if (!product.value) {
 
     //the createError() function creates an error page, using the error.vue component or default error page and sends the object placed in the argument
-    throw createError({ statusCode: 404, statusMessage: 'Product not found' })
+    throw createError({ statusCode: 404, statusMessage: 'Product not found', fatal: true })
+
+    //it is good to remind that the createError() function runs in the server. if there is a link/button to a page which doesn't exist, this won't caught the error
+    //and an uncaught error is showed in the browser's console.
+    //to solve that, add another property in the createError's object called fatal and set it to true
+    //it forces Nuxt to show the error page
 }
 
 
