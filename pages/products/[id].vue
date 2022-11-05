@@ -25,7 +25,12 @@ const { data: product } = await useFetch(uri, { key: id });
 //The way around it is to differentiate from each useFetch() by adding a second argument: a option object with the key vlue to a unique term.
 //in this case, the item id works.
 
+//checking if the product id exists and throwing an error if it doesn't
+if (!product.value) {
 
+    //the createError() function creates an error page, using the error.vue component or default error page and sends the object placed in the argument
+    throw createError({ statusCode: 404, statusMessage: 'Product not found' })
+}
 
 
 definePageMeta({
