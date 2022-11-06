@@ -19,8 +19,11 @@ export default defineEventHandler(async (event) => {
     // const { age } = await useBody(event)
     // //I use the function above to access the body argument in the fetch request
 
+    const { currencyKey } = useRuntimeConfig();
+
+
     //You can't use useFetch() in the server side.
-    const { data } = await $fetch('https://api.currencyapi.com/v3/latest?apikey=8Da263YoRnmBiB2TPUYYf5S9oEan40gyAeUazNlR&currencies=JPY%2CUSD%2CCAD')
+    const { data } = await $fetch(`https://api.currencyapi.com/v3/latest?apikey=${currencyKey}`)
     return {
         message: data
     }
