@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     modules: ["@nuxtjs/tailwindcss"],
     app: {
         head: {
-            title: 'Web Shop',
+            title: 'WebShop',
             meta: [
                 { name: 'description', content: 'Everything you want can be found here' }
             ],

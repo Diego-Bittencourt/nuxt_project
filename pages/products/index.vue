@@ -31,6 +31,16 @@ definePageMeta({
 //inside the composition api, I can use the await keyword
 const { data: products } = await useFetch('https://fakestoreapi.com/products')
 
+
+
+//You can also change the head content for each page, using the useHead() function which expects an object.
+useHead({
+    title: 'WebShop | Products',
+    meta: [
+        { name: 'description', content: 'All products at low price!'}
+    ]
+})
+//everytime a component/page is loaded and it contais the useHead() function, it will overwrite the global object written in the nuxt.config.ts file
 </script>
 
 <style scoped>
