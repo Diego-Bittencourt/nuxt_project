@@ -1,6 +1,13 @@
 
 <template>
     <div>
+        <!-- Using the pre-built components Head, Title, Meta I can set the head of a page directly from the template in my component/page.
+            it can use interpolation to use variables and dynamic data.
+        it also overwrites the global app object, in the nuxt.config.ts file -->
+        <Head>
+            <Title>{{ product.title }} | WebShop</Title>
+            <Meta name="description" :content="product.description" />
+        </Head>
         <ProductDetails :product="product" />
     </div>
 </template>
