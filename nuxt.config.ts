@@ -11,6 +11,12 @@ export default defineNuxtConfig({
                 { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' }
             ]
         }
+    },
+    //to create environment variable, create an object like the following
+    //all variable in the runtimeConfig will be exposed in the backend
+    runtimeConfig: {
+        currencyKey: process.env.CURRENCY_API_KEY
+        //to expose variables to the frontend, add the public key that also accepts an object
     }
 })
 

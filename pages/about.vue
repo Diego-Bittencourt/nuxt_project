@@ -9,12 +9,7 @@
 
 <script setup>
 //to use server routes, I can make a http request
-const { data } = await useFetch('/api/route?name=Diego', {
-    method: 'POST',
-    body: {
-        age: 36
-    }
-})
+const { data } = await useFetch('/api/currency/CAD')
 
 </script>
 
