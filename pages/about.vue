@@ -2,14 +2,19 @@
 
     <div>
         <h2>ABOUT</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est iusto nihil commodi voluptatibus cumque ab
-            nesciunt doloribus aut, illum tempora deleniti ipsam maiores magnam possimus a libero nemo adipisci
-            pariatur?</p>
+        <p>Test</p>
+        <p>{{ data }}</p>
     </div>
 </template>
 
 <script setup>
-
+//to use server routes, I can make a http request
+const { data } = await useFetch('/api/route?name=Diego', {
+    method: 'POST',
+    body: {
+        age: 36
+    }
+})
 
 </script>
 
