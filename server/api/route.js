@@ -9,21 +9,21 @@
 
 export default defineEventHandler(async (event) => {
 
-    // handle qery params
-    const { name } = useQuery(event);
-    //I use the function before to access url params sent with the http request
-    ///api/route?name=Diego
+    // // handle qery params
+    // const { name } = useQuery(event);
+    // //I use the function before to access url params sent with the http request
+    // ///api/route?name=Diego
 
 
-    // handle post data
-    const { age } = await useBody(event)
-    //I use the function above to access the body argument in the fetch request
+    // // handle post data
+    // const { age } = await useBody(event)
+    // //I use the function above to access the body argument in the fetch request
 
-
+    //You can't use useFetch() in the server side.
+    const { data } = await $fetch('https://api.currencyapi.com/v3/latest?apikey=8Da263YoRnmBiB2TPUYYf5S9oEan40gyAeUazNlR&currencies=JPY%2CUSD%2CCAD')
     return {
-        message: `Hello, ${name}! Your are ${age} years old.`
+        message: data
     }
-
 
 
 
