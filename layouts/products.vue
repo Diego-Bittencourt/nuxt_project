@@ -2,7 +2,8 @@
     <div>
     <header class="shadow-sm bg-white">
         <nav class="container mx-auto p-4">
-            <nuxt-link to="/products" class="font-bold">Products</nuxt-link>
+            <nuxt-link to="/" class="font-bold mr-5 hover:bg-gray-100 bg-opacity-30 p-3 transition ">TOP</nuxt-link>
+            <nuxt-link to="/products" class="font-bold hover:bg-gray-100 bg-opacity-30 p-3 transition ">Products</nuxt-link>
 
         </nav>
     </header>
