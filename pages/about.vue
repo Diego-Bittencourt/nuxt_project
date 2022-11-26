@@ -3,7 +3,7 @@
     <div>
         <h2>ABOUT</h2>
         <p>Test</p>
-        <p>{{ data }}</p>
+        <p>{{ data.CAD.name }}</p>
     </div>
 </template>
 

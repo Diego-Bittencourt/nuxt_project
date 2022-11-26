@@ -3,9 +3,9 @@
     <div>
        
         <h2>Home</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est iusto nihil commodi voluptatibus cumque ab
-            nesciunt doloribus aut, illum tempora deleniti ipsam maiores magnam possimus a libero nemo adipisci
-            pariatur?</p>
+        <p>Welcome to my shop. We have many products with low prices. Unfortunatelly, everything is fake and it only exists in the our imagination. I mean,
+            in the API's data and in this frontend
+        </p>
     </div>
 </template>
 
